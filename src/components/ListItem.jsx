@@ -1,13 +1,13 @@
-var React = require('react');
+import React, { Component } from 'react';
 
 
-var ListItem = React.createClass({
-  render: function(){
+class ListItem extends Component{
+  render(){
     return(
       <li>
         <h4>{this.props.ingredient}</h4>
       </li>
     )
   }
-});
-module.exports = ListItem;
+};
+export default ListItem;
