@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
-
 class ListItem extends Component{
-  render(){
+  render (){
+      console.log("this-u: ", this)
     return(
+
       <li>
-        <h4>{this.props.ingredient}</h4>
+        <h4>{this.props.text}</h4>
       </li>
     )
   }
-};
+}
+
 export default ListItem;
