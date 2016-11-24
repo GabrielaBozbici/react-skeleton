@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class ListItem extends Component{
   render (){
-      console.log("this-u: ", this)
     return(
 
       <li>

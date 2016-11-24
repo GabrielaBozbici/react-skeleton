@@ -7,6 +7,8 @@ class App extends Component {
     return (
       <div className="App">
         <ListManager title="Ingredients" />
+        <ListManager title="To-Do List" />
+        <ListManager title="Christmas" headingColor="#b31217" />
       </div>
     );
   }

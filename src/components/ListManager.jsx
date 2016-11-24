@@ -5,7 +5,7 @@ class ListManager extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items:["bla", "blu"],
+      items:["egg"],
       newItemtext:''
     };
   }
@@ -14,7 +14,7 @@ class ListManager extends Component {
   handleChange(e){
     this.setState({ newItemtext: e.target.value });
   }
-  
+
   handleSubmit(e){
     e.preventDefault();
     var currentItems = this.state.items;
@@ -23,15 +23,34 @@ class ListManager extends Component {
   }
 
   render(){
-    console.log("this-u: ", this)
+    var divStyle = {
+      marginTop: 10
+    };
+    var headingStyle = {
+
+    };
+    if(this.props.headingColor){
+      headingStyle.backgroundColor = this.props.headingColor;
+    }
+
     return (
-      <div>
-        <h3>{this.props.title}</h3>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <input onChange={this.handleChange.bind(this)} value={this.state.newItemtext} />
-          <button>add</button>
-        </form>
-        <List items={this.state.items} />
+      <div style={divStyle} className="col-sm-4">
+        <div className="panel panel-primary">
+          <div style={headingStyle} className="panel-heading">
+            <h3>{this.props.title}</h3>
+          </div>
+          <div className=" raw panel-body">
+            <form onSubmit={this.handleSubmit.bind(this)}>
+              <div className="col-sm-9">
+                <input className="form-control" onChange={this.handleChange.bind(this)} value={this.state.newItemtext} />
+              </div>
+              <div className="col-sm 2">
+                <button className="btn btn-primary">add</button>
+              </div>
+            </form>
+          </div>
+          <List items={this.state.items} />
+        </div>
       </div>
     );
   }
