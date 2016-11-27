@@ -1,14 +1,28 @@
-/*.App {
-  text-align: center;
-}*/
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.App {
   color: white;
 }
+.panel-footer {
+  background-color: #484D4D;
+}
+.panel {
+  border-color: #ddd;
+}
+.topTxt {
+  color: black;
+}
+.large {
+  height: 150px;
+  border: 0px;
+}
+.panel-footer {
+  border-top: 0px;
+}
+.small {
+  height: 50px;
+  border: 0px;
 
-.App-intro {
-  font-size: large;
+}
+.small h6 {
+  margin-top: 0px;
 }
