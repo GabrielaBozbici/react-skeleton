@@ -33,8 +33,8 @@ render(){
               </div>
               <div className="col-sm-12 clearfix">
                 <div className="menu pull-right">
-                  <Link to="/page1">NEWS</Link>
-                  <Link to="/page2">PHOTOS</Link>
+                  <Link to="/page1">PHOTOS</Link>
+                  <Link to="/page2">NEWS</Link>
                 </div>
               </div>
             </div>
